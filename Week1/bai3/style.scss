@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer {
+    width: 100%;
+    min-height: 100px;
+    border: 10px solid white;
+    background: rgb(31, 31, 31);
+    padding: 50px 20px 20px;
+    color: white;
+    display: grid;
+    grid-template-columns: 30% 21% 24% 17%;
+    grid-gap: 20px;
+    box-shadow: 5px 5px 10px rgb(142, 142, 142);
+
+    p {
+        color: rgb(142, 142, 142);
+        line-height: 25px;
+    }
+
+    section {
+        #logo {
+            width: 190px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: rgb(133, 152, 204);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    article {
+        width: 100%;
+
+        ul {
+            li {
+                border-bottom: 1px dotted rgb(142, 142, 142);
+                list-style: none;
+                min-height: 50px;
+                line-height: 50px;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(142, 142, 142);
+                }
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .social {
+        ul li {
+            img {
+                border-right: 1px dotted rgb(142, 142, 142);
+                display: block;
+                float: left;
+                margin-top: 15px;
+                padding-right: 10px;
+                &::after{
+                    content: "";
+                    clear: both;
+                    display: table;
+                }
+            }
+            p {
+                color: rgb(142, 142, 142);
+                display: block;
+                float: left;
+                margin: 10px 0px 0px 10px;
+            }
+
+        }
+    }
+}
