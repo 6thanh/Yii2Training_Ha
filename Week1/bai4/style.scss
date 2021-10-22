@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#all {
+    width: 100%;
+    min-height: 100px;
+    border: 10px solid white;
+    background: rgb(247, 246, 246);
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgb(142, 142, 142);
+    header{
+        background: rgb(1,186,207);
+        color: white;
+        height: 230px;
+        h2 {
+            width: 85%;
+            margin: auto;
+            padding-top: 60px;
+            line-height: 30px;
+        }
+    }
+    section {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        top: -50px;
+        article {
+            width: 340px;
+            background: white;
+            margin: 10px 30px 10px 0px;
+            padding: 50px 20px 20px;
+            h4 {
+                margin: 20px 0px;
+            }
+            p {
+                color: rgb(190,190,190);
+                line-height: 25px;
+            }
+        }
+    }
+}

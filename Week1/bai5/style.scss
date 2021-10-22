@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+// ==========mobile==========
+#all {
+    width: 100%;
+    min-height: 100px;
+    margin: 0px 10px 10px;
+    background: rgb(243, 245, 246);
+    box-shadow: 5px 5px 10px rgb(142, 142, 142);
+    $blueColor: rgb(88, 161, 248);
+    $greyColor: rgb(164, 164, 164);
+    padding: 10px;
+
+    h1 {
+        color: rgb(9, 117, 245);
+        margin: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $blueColor;
+    }
+
+    @mixin span_color {
+        color: rgb(197, 197, 197);
+        margin: 10px;
+    }
+
+    #main {
+        background: white;
+
+        article {
+            width: 100%;
+            padding: 10px 0px;
+            border-bottom: 1px dotted rgb(197, 197, 197);
+
+            img {
+                width: 320px;
+                display: block;
+                margin: auto;
+            }
+
+            .content {
+                h4 {
+                    margin: 10px;
+                }
+
+                span {
+                    @include span_color;
+                }
+
+                p {
+                    color: $greyColor;
+                    margin: 10px;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .sidebar {
+        @mixin border_sidebar {
+            margin-top: 10px;
+            background: white;
+            padding: 10px;
+        }
+
+        h3 {
+            color: $blueColor;
+            margin: 10px;
+            text-align: center;
+        }
+
+        hr {
+            margin-bottom: 20px;
+            border: 1px solid black;
+        }
+
+        section {
+            @include border_sidebar;
+
+            article {
+                display: grid;
+                grid-template-columns: auto auto;
+                border-bottom: 1px dotted $greyColor;
+                padding: 10px 0px;
+
+                img {
+                    width: 120px;
+                }
+
+                .mini_content {
+                    h4 {
+                        margin: 0px 0px 10px 10px;
+                    }
+
+                    span {
+                        @include span_color;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        nav {
+            @include border_sidebar;
+
+            ul {
+                width: 100%;
+
+                li {
+                    height: 50px;
+                    line-height: 50px;
+                    list-style: none;
+                    border-bottom: 1px dotted $greyColor;
+
+                    &:hover {
+                        background: rgb(197, 197, 197);
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    a {
+                        color: rgb(128, 128, 128);
+
+                        strong {
+                            color: black;
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        float: right;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #all {
+        #main {
+            article {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+        }
+
+        .sidebar {
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+            section {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    #all {
+        display: grid;
+        grid-template-columns: 72% 25%;
+
+        #main {
+            padding: 10px;
+        }
+
+        .sidebar {
+            display: block;
+            margin: 0px auto auto 20px;
+
+            section {
+                margin: 0px auto 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+
+#all {
+  width: 100%;
+  min-height: 100px;
+  margin: 0px 10px 10px;
+  background: #f3f5f6;
+  box-shadow: 5px 5px 10px #8e8e8e;
+  padding: 10px; }
+  #all h1 {
+    color: #0975f5;
+    margin: 10px; }
+  #all a {
+    text-decoration: none;
+    color: #58a1f8; }
+  #all #main {
+    background: white; }
+    #all #main article {
+      width: 100%;
+      padding: 10px 0px;
+      border-bottom: 1px dotted #c5c5c5; }
+      #all #main article img {
+        width: 320px;
+        display: block;
+        margin: auto; }
+      #all #main article .content h4 {
+        margin: 10px; }
+      #all #main article .content span {
+        color: #c5c5c5;
+        margin: 10px; }
+      #all #main article .content p {
+        color: #a4a4a4;
+        margin: 10px; }
+      #all #main article:last-child {
+        border-bottom: none; }
+  #all .sidebar h3 {
+    color: #58a1f8;
+    margin: 10px;
+    text-align: center; }
+  #all .sidebar hr {
+    margin-bottom: 20px;
+    border: 1px solid black; }
+  #all .sidebar section {
+    margin-top: 10px;
+    background: white;
+    padding: 10px; }
+    #all .sidebar section article {
+      display: grid;
+      grid-template-columns: auto auto;
+      border-bottom: 1px dotted #a4a4a4;
+      padding: 10px 0px; }
+      #all .sidebar section article img {
+        width: 120px; }
+      #all .sidebar section article .mini_content h4 {
+        margin: 0px 0px 10px 10px; }
+      #all .sidebar section article .mini_content span {
+        color: #c5c5c5;
+        margin: 10px; }
+      #all .sidebar section article:last-child {
+        border-bottom: none; }
+  #all .sidebar nav {
+    margin-top: 10px;
+    background: white;
+    padding: 10px; }
+    #all .sidebar nav ul {
+      width: 100%; }
+      #all .sidebar nav ul li {
+        height: 50px;
+        line-height: 50px;
+        list-style: none;
+        border-bottom: 1px dotted #a4a4a4; }
+        #all .sidebar nav ul li:hover {
+          background: #c5c5c5; }
+        #all .sidebar nav ul li:last-child {
+          border-bottom: none; }
+        #all .sidebar nav ul li a {
+          color: gray; }
+          #all .sidebar nav ul li a strong {
+            color: black; }
+        #all .sidebar nav ul li span {
+          display: block;
+          float: right;
+          margin-right: 10px; }
+
+@media only screen and (min-width: 768px) {
+  #all #main article {
+    display: grid;
+    grid-template-columns: auto auto; }
+  #all .sidebar {
+    display: grid;
+    grid-template-columns: 50% 50%; }
+    #all .sidebar section {
+      margin-right: 10px; } }
+@media only screen and (min-width: 1025px) {
+  #all {
+    display: grid;
+    grid-template-columns: 72% 25%; }
+    #all #main {
+      padding: 10px; }
+    #all .sidebar {
+      display: block;
+      margin: 0px auto auto 20px; }
+      #all .sidebar section {
+        margin: 0px auto 20px; } }
+
+/*# sourceMappingURL=style.css.map */
