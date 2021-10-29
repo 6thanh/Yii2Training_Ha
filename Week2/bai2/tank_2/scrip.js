@@ -18,7 +18,7 @@ $(function () {
                 "width": "30px",
                 "height": "30px"
             });
-            boom.css("background", "none");
+            boom.hide();
             setTimeout(restarGame, 1000)
         }
     }
@@ -34,7 +34,7 @@ $(function () {
         checkBoom()
     })
     $("#bottomBtn").click(function () {
-        if (y < 170) {
+        if (y < $(".arena").innerHeight()-$("#tank").outerHeight()) {
             y += 19
         } else y += 0
         $("#tank").css("top", y + "px")
@@ -48,7 +48,7 @@ $(function () {
         checkBoom()
     })
     $("#rightBtn").click(function () {
-        if (x < 170) {
+        if (x < $(".arena").innerWidth()-$("#tank").outerWidth()) {
             x += 19
         } else x += 0
         $("#tank").css("left", x + "px")
