@@ -1,0 +1,10 @@
+ Thiê´t kê´ giao diê?n nhu hi`nh di´nh ke`m:
+        - Ma`n hi`nh hiê?n thi? sô´ duo?c cho?n va` kê´t qua?
+        - Ca´c button sô´ tu` 0 dê´n 9
+        - Ca´c button phe´p ti´nh: +, -, x, /... (Co´ thê? thêm ca´c phe´p ti´nh kha´c nê´u muô´n)
+        - Button thu?c hiê?n phe´p ti´nh: '='
+
+        Mô ta? chu´c nang:
+        - Nguo`i du`ng thu?c hiê?n ti´nh toa´n ba`ng ca´ch nhâ´n va`o button sô´, rô`i nhâ´n va`o button phe´p ti´nh,
+        sau do´ nhâ´n va`o button sô´. Cuô´i cu`ng nguo`i du`ng nhâ´n va`o button '=' dê? thu?c hiê?n ti´nh toa´n.
+        - Khi nguo`i du`ng nhâ´n va`o button '=' thi` ma´y ti´nh thwucj hiê?n ti´nh toa´n va` hiê?n thi? kê´t qua?.

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="D:/PF2108R1/tu-hoc/jQuery/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .calculator {
+            width: 400px;
+            min-height: 350px;
+            border: 10px solid black;
+            padding: 10px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .calculator button {
+            width: 70px;
+            height: 70px;
+            border: 3px groove grey;
+            font-size: 35px;
+            color: blue;
+            font-weight: bold;
+            margin: auto;
+        }
+
+        #result {
+            grid-column: 1 / 5;
+            border: 1px solid grey;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            text-align: right;
+            font-size: 35px;
+            color: black;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div id="result"></div>
+        <button class="keyNummber" id="1">1</button>
+        <button class="keyNummber" id="2">2</button>
+        <button class="keyNummber" id="3">3</button>
+        <button class="keyCalculator" value="+">+</button>
+
+        <button class="keyNummber" id="4">4</button>
+        <button class="keyNummber" id="5">5</button>
+        <button class="keyNummber" id="6">6</button>
+        <button class="keyCalculator" value="-">-</button>
+
+        <button class="keyNummber" id="7">7</button>
+        <button class="keyNummber" id="8">8</button>
+        <button class="keyNummber" id="9">9</button>
+        <button class="keyCalculator" value="*">x</button>
+
+        <button id="keyClear">C</button>
+        <button class="keyNummber" id="0">0</button>
+        <button id="keyEqual">=</button>
+        <button class="keyCalculator" value="/">/</button>
+    </div>
+
+<script>    
+    $(function(){
+        let display = ''
+        let numberFirst = ''
+        let numberSecond = ''
+        let operator = ''
+        $('.keyNummber').click(function(){
+            display += this.id;
+            $('#result').text(display)
+        })
+        $('.keyCalculator').click(function(){
+            operator = this.value;
+            $('#result').text('');
+            numberFirst = parseFloat(display);
+            display = '';
+        });
+        
+        $('#keyEqual').click(function(){
+            if (numberFirst=='' || display == ''){
+                alert("Enter number")
+            }            
+            numberSecond = parseFloat(display);
+            display = eval(numberFirst + operator + numberSecond)
+            $('#result').text(display)
+            display = ''
+            clear()
+        })
+        $('#keyClear').click(function(){
+            display = ''
+            clear()
+            $('#result').text(display)
+        })
+        function clear(){
+            numberFirst = ''
+            numberSecond = ''
+            operator = ''
+        }
+    })
+</script>
+</body>
+
+</html>
