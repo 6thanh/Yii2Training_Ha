@@ -8,7 +8,8 @@
 </head>
 <body>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-<input type="text">
+<input type="text" name="inputNumber" value="<?php echo $inputNumber;?>">
+<input type="number" name="times" value="<?php echo $times;?>">
 <input type="submit" name="submit" value="Submit">
 </form>
 </body>
